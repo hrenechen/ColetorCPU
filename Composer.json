@@ -1,0 +1,22 @@
+{
+    "name": "hrenechen/COLETORCPU",
+    "homepage": "https://www.linkedin.com/in/hrenechen/",
+    "description": "Colect percentual usage of CPU from client machines, make exponential moving average and calculing averange referent 10 seconds for send to server.",
+    "authors": [
+    {
+    "name": "Jonathan W Hrenechen",
+    "email": "hrenechen@gmail.com"
+    }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "keywords": [
+    "Coletor",
+    "CPU",
+    "Benchmark",
+    "colector",
+    "ema",
+    "mme"
+    ]
+    }
