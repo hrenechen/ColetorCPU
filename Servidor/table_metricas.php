@@ -13,6 +13,8 @@ while($rowtotalbenchmark = mysqli_fetch_array($sqltotalbenchmark)) {
 $totalbenchmark = $rowtotalbenchmark['benchmark'];
 $valorbenchmark = regra_de_tres_simples($totalbenchmark,$totalbenchmark);
 }
+echo 'Verificação presente <br>';
+echo '<br>';
 # contagem de tabelas: 
 $sql = mysqli_query($db,"SELECT  id, benchmark 
 FROM computador_cliente
@@ -34,6 +36,29 @@ while($row = mysqli_fetch_array($sql)) {
         echo ('<br>');
 } 
 }
-
+echo '<br>';
+echo 'Metricas de analise <br>';
+echo '<br>';
+# contagem de tabelas: 
+$sql = mysqli_query($db,"SELECT  id, benchmark 
+FROM computador_cliente
+");
+while($row = mysqli_fetch_array($sql)) {
+    $id = $row['id']; 
+    $pbenchmark = $row['benchmark'];
+    $var1 = 'SELECT dt, hora, serie FROM serie';
+    $var2 =$id;
+    $var3 =' WHERE dt = "';
+    $var4 =$agora;
+    $var5 = '" ORDER BY id DESC LIMIT 5;'; 
+    $sql1 = $var1.$var2.$var3.$var4.$var5;
+    $sql1 = mysqli_query($db, $sql1);
+    while($row1 = mysqli_fetch_array($sql1)) {
+        echo ("<div style='float:left;position: relative;padding-right: 15px;padding-left: 15px;display:block; '>");
+        echo ("Computador: ".$id." CPU ".$row1['serie']."%");
+        echo ('<br>');
+        echo ('</div>');
+} 
+}
 echo "<meta HTTP-EQUIV='refresh' CONTENT='0'>";
 ?>

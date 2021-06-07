@@ -26,7 +26,7 @@ Servidor
 </div>
 <br><br>
   <div class="container">
-  <iframe width=100% src="table_metricas.php"></iframe>
+  <iframe width=100% height=500px src="table_metricas.php"></iframe>
   </div>
 </form>    
 </body>
