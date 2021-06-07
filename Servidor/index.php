@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <meta http-equiv="Content-Language" content="pt-br">
 <HTML ng-app lang="pt-br">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta charset="utf-8">
@@ -19,15 +20,13 @@
  include_once "conect_server.php";
 ?>
 <div class="container">
-<h3 class='titulo .font-weight-bolder'>
+<h3 class='titulo font-weight-bolder'>
 Servidor
 </h3>
 </div>
 <br><br>
   <div class="container">
-  <?php 
-  include_once "table_metricas.php";
-  ?>
+  <iframe width=100% src="table_metricas.php"></iframe>
   </div>
 </form>    
 </body>

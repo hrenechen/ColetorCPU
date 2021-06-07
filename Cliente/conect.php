@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 /* Habilita a exibição de erros */
 ini_set("display_errors", 1);
-//Nome do servidor
+//Nome do servidor # trocar para o ip remoto
  @$db_host = "localhost";
 //Usuário do banco
  @$db_user = "root";

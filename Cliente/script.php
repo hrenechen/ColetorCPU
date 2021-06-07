@@ -13,7 +13,7 @@
     $cpuLoad = getServerLoad();
     $arr[]= $cpuLoad;
     }
-    $agora = date('d/m/Y');
+    $agora = date('d/m/y');
     $hora = date('H:i:s');
     $mac = GetMAC(); 
 $MME =array();
@@ -46,5 +46,5 @@ $sql1 = 'INSERT INTO serie'.$id.'(fk, dt, hora, serie)
 VALUES ("'.$id.'","'.$agora.'","'.$hora.'","'.$valor_transmissao.'")';
 mysqli_query($db,$sql1) or die("Algo deu errado cod:47");
 }
-header('Refresh:0'); 
+header('Refresh:0 ; url=script.php'); 
 ?>
