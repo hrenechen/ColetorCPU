@@ -3,6 +3,7 @@ include_once "regra_tres.php";
 include_once "conect_server.php";
 $db = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 @$db ->set_charset('utf8');
+date_default_timezone_set('America/Sao_Paulo');
 # calculo do Bechmark
 $agora = date('d/m/y');
 $hora = date('H:i:s');
@@ -55,7 +56,20 @@ while($row = mysqli_fetch_array($sql)) {
     $sql1 = mysqli_query($db, $sql1);
     while($row1 = mysqli_fetch_array($sql1)) {
         echo ("<div style='float:left;position: relative;padding-right: 15px;padding-left: 15px;display:block; '>");
-        echo ("Computador: ".$id." CPU ".$row1['serie']."%");
+        echo ("Computador: ".$id." CPU ");
+        if ($row1['serie'] > 80) {
+            echo ("<label style='color:red'>");
+            echo ($row1['serie']."%");
+            echo ("</label>");
+        }elseif ($row1['serie'] > 40) {
+            echo ("<label style='color:green'>");
+            echo ($row1['serie']."%");
+            echo ("</label>");
+        }else {
+            echo ("<label style='color:blue;'>");
+            echo ($row1['serie']."%");
+            echo ("</label>");
+        }
         echo ('<br>');
         echo ('</div>');
 } 

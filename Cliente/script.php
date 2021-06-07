@@ -7,6 +7,7 @@
  include_once "generateMediaTransmissao.php";
  $db = mysqli_connect($db_host, $db_user, $db_pass, $db_name); 
  @$db ->set_charset('utf8'); 
+ date_default_timezone_set('America/Sao_Paulo');
     #criando o array com 5 previsões.
     $arr = array();
     for ($i=0; $i < 7 ; $i++) { 
