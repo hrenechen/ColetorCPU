@@ -1,9 +1,10 @@
-Framework_up
+Coletor de CPU.
 
-Configure The "php.ini" File
+Script simples de leitura e envio dos dados do CPU das maquinas clientes para o servidor principal, para auxiliar na migração de serviços para o servidor com a melhor disponibilidade.
 
-First, ensure that PHP is configured to allow file uploads.
-
-In your "php.ini" file, search for the file_uploads directive, and set it to On:
-
-file_uploads = On
+Dados coletados:
+ - Nome da maquina
+ - Mac Address
+ - Data/hora
+ - Porcentagem de uso da CPU
+ - tabela de Benchmark com cruzamento dos dados, e regra de 3 para calcular a diferença de porcentagem dos processadores tendo por parametro o de maior benchmark. 
