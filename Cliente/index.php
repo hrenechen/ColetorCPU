@@ -30,9 +30,9 @@
  include_once "generateMME.php";
  include_once "generateMAPE.php";
  include_once "generateMediaTransmissao.php";
-    #criando o array com 5 previsões.
+    #criando o array com 15 previsões.
     $arr = array();
-    for ($i=0; $i < 7 ; $i++) { 
+    for ($i=0; $i < 15 ; $i++) { 
     $cpuLoad = getServerLoad();
     $arr[]= $cpuLoad;
     }
@@ -48,7 +48,7 @@
 echo ('<br>');
 $MME =array();
 $MME = MediaMovelExp( $arr , 2 );
-$MAPE = MAPE($arr, $MME, 3);
+$MAPE = MAPE($arr, $MME, 13);
 echo ('<br>');
 echo ('<br><b>MME: </b>');
 print_r($MME);

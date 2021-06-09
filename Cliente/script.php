@@ -8,9 +8,9 @@
  $db = mysqli_connect($db_host, $db_user, $db_pass, $db_name); 
  @$db ->set_charset('utf8'); 
  date_default_timezone_set('America/Sao_Paulo');
-    #criando o array com 5 previsões.
+    #criando o array com 15 previsões.
     $arr = array();
-    for ($i=0; $i < 7 ; $i++) { 
+    for ($i=0; $i < 15 ; $i++) { 
     $cpuLoad = getServerLoad();
     $arr[]= $cpuLoad;
     }
@@ -19,7 +19,7 @@
     $mac = GetMAC(); 
 $MME =array();
 $MME = MediaMovelExp( $arr , 2 );
-$MAPE = MAPE($arr, $MME, 3);
+$MAPE = MAPE($arr, $MME, 13);
 $valor_transmissao = MediaTransmissao($MME);
    $value1 = 'SELECT COUNT(id) AS contador FROM computador_cliente WHERE mac=';
    $value2 = ($value1."'".$mac."';");
