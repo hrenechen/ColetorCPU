@@ -11,4 +11,4 @@ Dados coletados:
 
  Forma de passagem dos parametros-> Banco de dados Mysql.
   - Cliente efetua a captura dos dados de CPU de segundo em segundo e calcula a Média Móvel Exponencial (MME). Após cria a media de transferencia com os valores referentes ao periodo de 10 segundos.
-  - Servidos mostra as metricas de uso dos computadores clientes.   
+  - Servidor mostra as metricas de uso dos computadores clientes.   
