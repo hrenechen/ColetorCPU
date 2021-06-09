@@ -9,7 +9,7 @@ $k = 2 / $periodo;
 $k = round($k,3);
 if  ($k >= 0 AND $k <= 1){
     $previsao = array();
-    #previsão do periodo proposto sendo posiçãoinicial = 0 + periodo_atual  
+    #previsão do periodo proposto sendo posição_inicial = 0 + periodo_atual  
     $eixo_y_anterior = 0;
     $eixo_y = -1 ;
     for ($i=0; $i < $ptamanho; $i++) {  

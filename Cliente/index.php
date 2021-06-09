@@ -48,7 +48,7 @@
 echo ('<br>');
 $MME =array();
 $MME = MediaMovelExp( $arr , 2 );
-$MAPE = MAPE($arr, $MME, 13);
+$MAPE = MAPE($arr, $MME);
 echo ('<br>');
 echo ('<br><b>MME: </b>');
 print_r($MME);

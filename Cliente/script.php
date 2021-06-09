@@ -19,7 +19,7 @@
     $mac = GetMAC(); 
 $MME =array();
 $MME = MediaMovelExp( $arr , 2 );
-$MAPE = MAPE($arr, $MME, 13);
+$MAPE = MAPE($arr, $MME);
 $valor_transmissao = MediaTransmissao($MME);
    $value1 = 'SELECT COUNT(id) AS contador FROM computador_cliente WHERE mac=';
    $value2 = ($value1."'".$mac."';");
